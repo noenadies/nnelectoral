@@ -271,7 +271,7 @@ if(mesa==""){
     elformulariolisto=false;
 }
     console.log(cedula);
-
+    elformulariolisto=true;
   }
 
   function alert2(st){
