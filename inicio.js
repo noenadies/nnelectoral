@@ -327,3 +327,42 @@ document.getElementById("idLongitud").value="";
 
 document.getElementById("idNotasv").value="";
   }
+
+
+  function javasolo(){
+
+
+    var elemntosus=document.getElementById("success");
+  var elementoshijos=  elemntosus.getElementsByClassName("text-center");
+  var eletbody=elemntosus.getElementsByTagName("tbody")[0];
+  var elemtd=elemntosus.getElementsByTagName("td");
+  var elema=eletbody.getElementsByTagName("a")[0];
+  console.log(elemtd);
+  for(var i in elemtd ){
+      console.log(   elemtd[i].innerText);
+    
+
+
+  }
+
+  
+  if(elema.length>0){
+
+
+
+var latitudm=0;
+var longitudm=0;
+console.log(elema.href);
+
+var respuntos = elema.href.split("=");
+longitudm=respuntos[2].split(",")[0];
+latitudm=respuntos[2].split(",")[1];
+console.log("latitudm");
+//console.log(respuntos[2]);
+console.log(latitudm);
+console.log(longitudm);
+console.log("latitudm");
+
+}
+
+  }
