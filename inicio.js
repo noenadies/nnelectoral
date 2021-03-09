@@ -66,6 +66,7 @@ function onclikidRegistrar(){
 
 
           $("#idbtsubir").click(function(){ 
+            llnardform();
     if(elformulariolisto){
         traervotantesparasubir();
     }
@@ -159,7 +160,7 @@ var idfirevotantes="votantes";
 var arraifireabeidfirevotantes=[];
  function subirvotantes(){
 
-    llnardform();
+
     boolpuedoubir=true;
     for(var i in  arraifireabeidfirevotantes){
         if(cedula==arraifireabeidfirevotantes[i].cedula){
@@ -220,7 +221,7 @@ console.log(boolpuedoubir);
     });
   }
 
-var elformulariolisto=false;
+var elformulariolisto=true;
   function llnardform(){
 
     elformulariolisto=true;
@@ -271,7 +272,8 @@ if(mesa==""){
     elformulariolisto=false;
 }
     console.log(cedula);
-    elformulariolisto=true;
+
+    
   }
 
   function alert2(st){
