@@ -240,6 +240,8 @@ var elformulariolisto=false;
     mesa="";
     idreferido="";
     movil="";
+
+    facebook="";
     nombre=document.getElementById("idnombre").value;
     papellido=document.getElementById("idpapellido").value;
     sapellido=document.getElementById("idsapellido").value;
@@ -251,7 +253,8 @@ var elformulariolisto=false;
     mesa=document.getElementById("idMesa").value;
     movil=document.getElementById("idtelefono").value;
     idreferido=document.getElementById("idReferido").value;
-
+    facebook= document.getElementById("idfacebook").value;
+    
 if(nombre==""){
     elformulariolisto=false;
 }
@@ -306,4 +309,6 @@ document.getElementById("idMesa").value="";
 document.getElementById("idReferido").value="";
 
 document.getElementById("idtelefono").value="";
+document.getElementById("idfacebook").value="";
+
   }
