@@ -177,7 +177,7 @@ console.log(boolpuedoubir);
   if(boolpuedoubir){
 
     if(elformulariolisto){
-        var  persona={nombre:nombre,cedula:cedula,departamento:departamento,municipio:municipio,puesto:puesto,
+        var  persona={nombre:nombre,papellido:papellido,sapellido:sapellido,cedula:cedula,departamento:departamento,municipio:municipio,puesto:puesto,
             direccion:direccion,mesa:mesa,fecha:fecha, referido:referido,movil:movil,email:email,facebook:facebook,
             referido:referido,idreferido:idreferido,notauser:notauser,notareferido:notareferido,lat:vlat,lng:vlng};
         firebase.database().ref().child(idfirevotantes).push(persona);
@@ -238,7 +238,8 @@ var elformulariolisto=false;
     puesto="";
     direccion="";
     mesa="";
-
+    idreferido="";
+    movil="";
     nombre=document.getElementById("idnombre").value;
     papellido=document.getElementById("idpapellido").value;
     sapellido=document.getElementById("idsapellido").value;
@@ -248,6 +249,9 @@ var elformulariolisto=false;
     puesto=document.getElementById("idPuestov").value;
     direccion=document.getElementById("idDireccion").value;
     mesa=document.getElementById("idMesa").value;
+    movil=document.getElementById("idtelefono").value;
+    idreferido=document.getElementById("idReferido").value;
+
 if(nombre==""){
     elformulariolisto=false;
 }
@@ -299,4 +303,7 @@ document.getElementById("idMunicipio").value="";
    document.getElementById("idPuestov").value="";
     document.getElementById("idDireccion").value="";
 document.getElementById("idMesa").value="";
+document.getElementById("idReferido").value="";
+
+document.getElementById("idtelefono").value="";
   }
