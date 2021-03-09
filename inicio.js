@@ -160,6 +160,9 @@ var notareferido="notareferido";
 
 var boolpuedoubir=false;
 var idfirevotantes="votantes";
+
+
+
 var arraifireabeidfirevotantes=[];
  function subirvotantes(){
 
@@ -240,8 +243,11 @@ var elformulariolisto=false;
     mesa="";
     idreferido="";
     movil="";
-
+    email="";
     facebook="";
+    vlat="";
+    vlng="";
+
     nombre=document.getElementById("idnombre").value;
     papellido=document.getElementById("idpapellido").value;
     sapellido=document.getElementById("idsapellido").value;
@@ -254,7 +260,10 @@ var elformulariolisto=false;
     movil=document.getElementById("idtelefono").value;
     idreferido=document.getElementById("idReferido").value;
     facebook= document.getElementById("idfacebook").value;
-    
+    email= document.getElementById("idemail").value;
+    vlat= document.getElementById("idLatitud").value;
+    vlng= document.getElementById("idLongitud").value;
+
 if(nombre==""){
     elformulariolisto=false;
 }
@@ -310,5 +319,8 @@ document.getElementById("idReferido").value="";
 
 document.getElementById("idtelefono").value="";
 document.getElementById("idfacebook").value="";
+document.getElementById("idemail").value="";
+document.getElementById("idLatitud").value="";
 
+document.getElementById("idLongitud").value="";
   }
