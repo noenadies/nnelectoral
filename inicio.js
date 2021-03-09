@@ -71,14 +71,18 @@ function onclikidRegistrar(){
     }
     else{
 
-        alert("no llame no sube nada");
+        alert2("no llame no sube nada");
     }
            
       
             });
   
-          
-
+$("#idbtalert2").click(function(){ 
+ ocultardiv("idmensaje");
+   
+  });         
+     
+                        
 
 }
 
@@ -173,19 +177,19 @@ console.log(boolpuedoubir);
             direccion:direccion,mesa:mesa,fecha:fecha, referido:referido,movil:movil,email:email,facebook:facebook,
             referido:referido,idreferido:idreferido,notauser:notauser,notareferido:notareferido,lat:vlat,lng:vlng};
         firebase.database().ref().child(idfirevotantes).push(persona);
-        alert("subio");
+        alert2("subio");
 
     }
  else{
 
-    alert("no subio faltaron datos");
+    alert2("no subio faltaron datos");
  }
 
 
  }
  else{
 
-    alert("esta cedula ya existe " + cedula);
+    alert2("esta cedula ya existe " + cedula);
  }
 
   }
@@ -267,5 +271,15 @@ if(mesa==""){
     elformulariolisto=false;
 }
     console.log(cedula);
+
+  }
+
+  function alert2(st){
+    // mostrardiv("idmensaje");
+      document.getElementById("idmensaje").style.display="flex";
+document.getElementById("idpmensaja").innerHTML=st;
+    
+
+
 
   }

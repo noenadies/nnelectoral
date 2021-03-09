@@ -210,6 +210,42 @@ background-color: rgb(107, 107, 107);
   color: #FFFFFF;
 z-index: 1200;
 }
+#idmensaje{
+
+display: none;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: 70%;
+  height: 200px;
+  background-color: #020202;
+  color: #FFFFFF;
+  font-size: 14px;
+  border: 5px solid #1C6EA4;
+border-radius: 40px 40px 40px 40px;
+text-align: center;
+z-index: 2000;
+
+
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+}
+#idbtalert2{
+  position: absolute;
+
+
+  bottom: 7%;
+  left: 40%;
+  
+  height: 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  z-index: 21222;
+}
 </style>
 
 
@@ -239,7 +275,11 @@ z-index: 1200;
 
 <div id="idtodo">
 
+<div id="idmensaje">
+<p id="idpmensaja"></p>
+<button id="idbtalert2">Aceptar</button>
 
+</div>
 <div id="idhijostodo">
 
 	<div id="idmenuregistrar" class="">
