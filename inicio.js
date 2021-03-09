@@ -65,8 +65,19 @@ function onclikidRegistrar(){
 
 
 
+          $("#idbtsubir").click(function(){ 
+    if(elformulariolisto){
+        traervotantesparasubir();
+    }
+    else{
 
-
+        alert("no llame no sube nada");
+    }
+           
+      
+            });
+  
+          
 
 
 }
@@ -120,6 +131,8 @@ console.log(todolodeadminfire);
   }
 
 var nombre="n11111111";
+var papellido="papellido";
+var sapellido="sapellido";
 var cedula=1119886131;
 var departamento="ciundin";
 var municipio="bogota";
@@ -142,7 +155,7 @@ var idfirevotantes="votantes";
 var arraifireabeidfirevotantes=[];
  function subirvotantes(){
 
-  
+    llnardform();
     boolpuedoubir=true;
     for(var i in  arraifireabeidfirevotantes){
         if(cedula==arraifireabeidfirevotantes[i].cedula){
@@ -154,13 +167,25 @@ var arraifireabeidfirevotantes=[];
              console.log("boolpuedoubir");
 console.log(boolpuedoubir);
   if(boolpuedoubir){
-    var  persona={nombre:nombre,cedula:cedula,departamento:departamento,municipio:municipio,puesto:puesto,
-        direccion:direccion,mesa:mesa,fecha:fecha, referido:referido,movil:movil,email:email,facebook:facebook,
-        referido:referido,idreferido:idreferido,notauser:notauser,notareferido:notareferido,lat:vlat,lng:vlng};
-    firebase.database().ref().child(idfirevotantes).push(persona);
-    alert("subio");
+
+    if(elformulariolisto){
+        var  persona={nombre:nombre,cedula:cedula,departamento:departamento,municipio:municipio,puesto:puesto,
+            direccion:direccion,mesa:mesa,fecha:fecha, referido:referido,movil:movil,email:email,facebook:facebook,
+            referido:referido,idreferido:idreferido,notauser:notauser,notareferido:notareferido,lat:vlat,lng:vlng};
+        firebase.database().ref().child(idfirevotantes).push(persona);
+        alert("subio");
+
+    }
+ else{
+
+    alert("no subio faltaron datos");
+ }
 
 
+ }
+ else{
+
+    alert("esta cedula ya existe " + cedula);
  }
 
   }
@@ -171,9 +196,8 @@ console.log(boolpuedoubir);
      arraifireabeidfirevotantes=snapshot.val();
  
 
-    setTimeout(() => {
-        traervotantesparasubir(); 
-    }, 2000);
+
+     
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
@@ -192,9 +216,56 @@ console.log(boolpuedoubir);
     });
   }
 
-
+var elformulariolisto=false;
   function llnardform(){
 
-document.getElementById().value;
+    elformulariolisto=true;
+
+    nombre="";
+    papellido="";
+    sapellido="";
+    cedula="";
+    departamento="";
+    municipio="";
+    puesto="";
+    direccion="";
+    mesa="";
+
+    nombre=document.getElementById("idnombre").value;
+    papellido=document.getElementById("idpapellido").value;
+    sapellido=document.getElementById("idsapellido").value;
+    cedula=document.getElementById("idCedula").value;
+    departamento=document.getElementById("idDepartamento").value;
+    municipio=document.getElementById("idMunicipio").value;
+    puesto=document.getElementById("idPuestov").value;
+    direccion=document.getElementById("idDireccion").value;
+    mesa=document.getElementById("idMesa").value;
+if(nombre==""){
+    elformulariolisto=false;
+}
+if(papellido==""){
+    elformulariolisto=false;
+}
+if(sapellido==""){
+    elformulariolisto=false;
+}
+if(cedula==""){
+    elformulariolisto=false;
+}
+
+if(departamento==""){
+    elformulariolisto=false;
+
+}  
+if(municipio==""){
+    elformulariolisto=false;
+}
+if(puesto==""){
+    elformulariolisto=false;
+}
+if(mesa==""){
+    elformulariolisto=false;
+}
+    console.log(cedula);
 
   }
