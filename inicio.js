@@ -82,8 +82,11 @@ $("#idbtalert2").click(function(){
  ocultardiv("idmensaje");
    
   });         
-     
-                        
+  $("#idbtLimpiar").click(function(){ 
+fidbtLimpiar   ();
+      
+     });      
+                      
 
 }
 
@@ -221,7 +224,7 @@ console.log(boolpuedoubir);
     });
   }
 
-var elformulariolisto=true;
+var elformulariolisto=false;
   function llnardform(){
 
     elformulariolisto=true;
@@ -284,4 +287,16 @@ document.getElementById("idpmensaja").innerHTML=st;
 
 
 
+  }
+
+  function fidbtLimpiar(){
+document.getElementById("idnombre").value="";
+    document.getElementById("idpapellido").value="";
+   document.getElementById("idsapellido").value="";
+document.getElementById("idCedula").value="";
+    document.getElementById("idDepartamento").value="";
+document.getElementById("idMunicipio").value="";
+   document.getElementById("idPuestov").value="";
+    document.getElementById("idDireccion").value="";
+document.getElementById("idMesa").value="";
   }
