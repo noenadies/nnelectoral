@@ -247,7 +247,8 @@ var elformulariolisto=false;
     facebook="";
     vlat="";
     vlng="";
-
+    notareferido="";
+    notauser="";
     nombre=document.getElementById("idnombre").value;
     papellido=document.getElementById("idpapellido").value;
     sapellido=document.getElementById("idsapellido").value;
@@ -263,7 +264,7 @@ var elformulariolisto=false;
     email= document.getElementById("idemail").value;
     vlat= document.getElementById("idLatitud").value;
     vlng= document.getElementById("idLongitud").value;
-
+    notauser= document.getElementById("idNotasv").value;
 if(nombre==""){
     elformulariolisto=false;
 }
@@ -323,4 +324,6 @@ document.getElementById("idemail").value="";
 document.getElementById("idLatitud").value="";
 
 document.getElementById("idLongitud").value="";
+
+document.getElementById("idNotasv").value="";
   }
