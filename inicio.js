@@ -3,6 +3,10 @@
 $(document).ready(function(){
     inicia();
 
+    
+    
+    
+  //  element.dispatchEvent(new KeyboardEvent('keydown',{'key':'Escape'}));
   });
 var firebase;
 
